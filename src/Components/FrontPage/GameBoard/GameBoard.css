@@ -1,0 +1,48 @@
+.game-board-grid {
+    height: 80vh;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    background-color: #9a9a9a;
+}
+
+@media (max-aspect-ratio: 1/1) {
+   .game-board-grid {
+    width: 80vw;
+    height: auto;
+   }
+}
+
+.game-board-field {
+    border: none;
+    background-color: #fff;
+    padding: 0;
+}
+
+.game-board-field:hover {
+    background-color: #dbdbdb;
+}
+
+.red {
+    color: #ff0000
+}
+
+.blue {
+    color: #0000ff
+}
+
+.game-board-button {
+    font-size: 7rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@media (max-width: 400px) {
+    .game-board-button {
+        font-size: 4rem;
+    }
+}

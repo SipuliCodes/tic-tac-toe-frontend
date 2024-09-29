@@ -1,7 +1,8 @@
+import FrontPage from "./Components/FrontPage/FrontPage"
 
 const App = () => {
     return (
-        <h1>App</h1>
+        <FrontPage />
     )
 }
 
