@@ -5,7 +5,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0.5rem;
-    background-color: #9a9a9a;
+    background-color: var(--thertiary-background-color);
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -17,16 +17,16 @@
 
 .game-board-field {
     border: none;
-    background-color: #fff;
+    background-color: var(--primary-background-color);
     padding: 0;
 }
 
 .game-board-field:hover {
-    background-color: #dbdbdb;
+    background-color: var(--secondary-background-color);
 }
 
 .red {
-    color: #ff0000
+    color: var(--red-color)
 }
 
 .blue {
@@ -45,4 +45,23 @@
     .game-board-button {
         font-size: 4rem;
     }
+}
+
+.game-board-winner-text {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    padding: 2rem 3rem 2rem 3rem;
+    font-size: 4rem;
+    background-color: var(--thertiary-background-color);
+}
+
+.game-board-play-button {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: var(--green-color);
+    color: var(--text-color);
 }
