@@ -14,7 +14,7 @@ const GameBoard = () => {
 	const [gameOn, setGameOn] = useState(false)
 	const [gameId, setGameId] = useState("")
 	const [winner, setWinner] = useState("")
-	const winnerText = winner === "X" ? "X won" : winner === "O" ? "O won" : winner === "d" ? "Draw" : ""
+	const winnerText = winner === "X" ? "X won" : winner === "O" ? "O won" : winner === "draw" ? "Draw" : ""
 
 	const makeMove = (squareNumber: number) => {
 		if (gameBoardButtons[squareNumber].squareSymbol === "") {
@@ -22,7 +22,11 @@ const GameBoard = () => {
 				.then(game => {
 					console.log(game)
 					if (game?.isOver) {
-						setWinner(game?.winner)
+                        setWinner(game?.winner)
+                        setTimeout(() => {
+                            setGameOn(false)
+                            setWinner("")
+                        }, 5000)
 					}
 					setGameBoardButtons(game?.gameBoard)
 				})
